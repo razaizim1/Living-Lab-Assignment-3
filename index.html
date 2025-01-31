@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse4Pets</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- TAILWIND AND DAISYUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'color-primary': '#FFDC26',
+                        'color-secondary': '#FFF9F4',
+                        'color-black': '#111111',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .title-font {
+            font-family: "ADLaM Display", serif;
+        }
+
+        .body-font {
+            font-family: "Sora", serif;
+        }
+    </style>
+</head>
+
+<body class="body-font">
+
+    <!-- Start Header Section -->
+
+    <header class="w-full">
+        <div class="bg-color-secondary">
+            <nav class="navbar md:container mx-auto">
+                <div class="navbar-start">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="/images/logo-header.png" alt="Header Logo">
+                        <span class="font-normal text-2xl hidden lg:block">Browse<span
+                                class="text-color-primary">4</span>Pets
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:block">
+                    <ul class="menu menu-horizontal px-1 text-xl">
+                        <li><a class="hover:text-color-primary hover:bg-transparent transition duration-400">Find a
+                                pet</a>
+                        </li>
+                        <li><a class="hover:text-color-primary hover:bg-transparent transition duration-400">Breeds</a>
+                        </li>
+                        <li><a class="hover:text-color-primary hover:bg-transparent transition duration-400">Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a class="hover:text-color-primary hover:bg-transparent transition duration-400">Find a
+                                    pet</a></li>
+                            <li><a
+                                    class="hover:text-color-primary hover:bg-transparent transition duration-400">Breeds</a>
+                            </li>
+                            <li><a class="hover:text-color-primary hover:bg-transparent transition duration-400">Contact
+                                    us</a></li>
+                        </ul>
+                    </div>
+                    <div class="lg:flex hidden">
+                        <button class="btn btn-ghost btn-circle">
+                            <div class="indicator">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                </svg>
+                                <span class="badge badge-xs badge-primary indicator-item"></span>
+                            </div>
+                        </button>
+                        <button class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                        <div class="header-btns flex gap-3">
+                            <a class="btn btn-outline border-color-primary px-7 font-normal text-xl">Login</a>
+                            <a
+                                class="btn text-color-black bg-color-primary px-7 font-normal text-xl hover:bg-color-black hover:text-white">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-section bg-color-bg  rounded-md md:container mx-auto">
+            <div class="carousel w-full lg:h-[550px]">
+                <div id="slide1" class="carousel-item relative w-full p-10 lg:p-24">
+                    <div class="lg:flex">
+                        <div class="text-content space-y-7 flex-1">
+                            <h1 class="text-6xl font-bold">Ride-on R15 V4 with Smile</h1>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.</p>
+                            <div class="btn text-white bg-color-primary">Purchase</div>
+                        </div>
+
+                        <div class="img-content flex-1">
+                            <img src="/images/slider/bike1.png" class="w-[400px]" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+                <div id="slide2" class="carousel-item relative w-full p-10 lg:p-24">
+                    <div class="lg:flex">
+                        <div class="text-content space-y-7 flex-1">
+                            <h1 class="text-6xl font-bold">Ride-on R15 V4 with Smile</h1>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.</p>
+                            <div class="btn text-white bg-color-primary">Purchase</div>
+                        </div>
+
+                        <div class="img-content flex-1">
+                            <img src="/images/slider/bike2.png" class="w-[400px]" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full p-10 lg:p-24">
+                    <div class="lg:flex">
+                        <div class="text-content space-y-7 flex-1">
+                            <h1 class="text-6xl font-bold">Ride-on R15 V4 with Smile</h1>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.</p>
+                            <div class="btn text-white bg-color-primary">Purchase</div>
+                        </div>
+
+                        <div class="img-content flex-1">
+                            <img src="/images/slider/bike3.png" class="w-[400px]" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full p-10 lg:p-24">
+                    <div class="lg:flex">
+                        <div class="text-content space-y-7 flex-1">
+                            <h1 class="text-6xl font-bold">Ride-on R15 V4 with Smile</h1>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.</p>
+                            <div class="btn text-white bg-color-primary">Purchase</div>
+                        </div>
+
+                        <div class="img-content flex-1">
+                            <img src="/images/slider/bike4.png" class="w-[400px]" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide5" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <main></main>
+    <footer></footer>
+</body>
+
+</html>
